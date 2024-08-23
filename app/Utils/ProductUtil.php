@@ -1831,7 +1831,7 @@ class ProductUtil extends Util
             'variations.sub_sku as sku',
             'p.name as product',
             'p.type',
-            'p.sub_unit_ids',
+            'p.sub_unit_ids as sub_unit_ids',
             'p.alert_quantity',
             'p.id as product_id',
             'units.short_name as unit',

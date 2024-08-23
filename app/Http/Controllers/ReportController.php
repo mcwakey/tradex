@@ -396,7 +396,7 @@ class ReportController extends Controller
                         $remainder = $stock % $casier;        // Remainder of the division
                     
                         // Return the calculated values in the formatted string
-                        return '<span class="current_stock" data-orig-value="' . (float)$stock . '" data-unit="' . $row->unit . '"> ' . 
+                        return '<span class="current_stock" data-orig-value = "' . (float)$stock . '" data-unit="' . $row->unit . '"> ' . 
                                $this->transactionUtil->num_f($stock, false, null, true) . '</span>' . 
                                ' ' . $row->unit . ' [ ' . $quotient . ' casiers ( ' . $remainder . ' ' . $row->unit . ' ) ]';
                         }else {
@@ -404,12 +404,9 @@ class ReportController extends Controller
                                $this->transactionUtil->num_f($stock, false, null, true) . '</span>' . 
                                ' ' . $row->unit;
                     }
-                } else {
+                    } else {
                         return '--';
                     }
-                    
-                    
-                    
                 })
                 ->editColumn('product', function ($row) {
                     $name = $row->name;
